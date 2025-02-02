@@ -8,5 +8,9 @@ export default defineEventHandler((event) => {
 
     // console.log(event.node.req.originalUrl, 'event.originalUrl -------------------');
 
-    return { headers: event.node.req.headers, originalUrl: event.node.req.originalUrl }
+    return {
+      headers: event.node.req.headers,
+      originalUrl: event.node.req.originalUrl,
+      url: event.node.req.url,
+    }
   })
